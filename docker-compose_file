@@ -1,0 +1,23 @@
+curl -s https://raw.githubusercontent.com/minhng92/odoo-12-docker-compose/master/run.sh | sudo bash -s odoo-one 10012 20012
+#master code
+pour configurer la première instance Odoo @ localhost:10012 (mot de passe principal par défaut : minhng.info) 
+#Démarrez le conteneur :
+sudo docker-compose up
+#Exécutez le conteneur Odoo en mode détaché (pouvez fermer le terminal sans arrêter Odoo):
+sudo docker-compose up -d
+#Si vous obtenez le problème d'autorisation, modifiez l'autorisation du dossier pour vous assurer que le conteneur peut accéder au répertoire :
+git clone https://github.com/minhng92/odoo-12-docker-compose
+sudo chmod -R 777 addons
+sudo chmod -R 777 etc
+mkdir -p postgresql
+sudo chmod -R 777 postgresql
+#Gestion des conteneurs Odoo
+sudo docker-compose up -d
+#Exécutez Odoo :
+docker-compose up -d
+#Redémarrez Odoo :
+sudo docker-compose restart
+#Arrêtez Odoo :
+sudo docker-compose stop
+
+
