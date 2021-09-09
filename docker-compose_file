@@ -19,5 +19,11 @@ docker-compose up -d
 sudo docker-compose restart
 #Arrêtez Odoo :
 sudo docker-compose stop
+#créer un module sur odoo
+docker exec -ti nom_du conteneur bash
+sudo docker exec -ti odoo-one_odoo12_1 bash
+/usr/bin/odoo scaffold le_nom_du_module /mnt/extra-addons
+
+
 
 
